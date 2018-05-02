@@ -445,7 +445,11 @@ class Connection implements ConnectionInterface, ServerInfoAwareConnection
     protected function createTransaction($commitDefaultTransaction = true)
     {
         if ($commitDefaultTransaction) {
+            try {
             @ibase_commit($this->_ibaseConnectionRc);
+            } catch(\Exception $e) {
+                //silent
+            }
         }
         $sql = $this->getStartTransactionSql($this->attrDcTransIsolationLevel);
         $result = @ibase_query($this->_ibaseConnectionRc, $sql);
