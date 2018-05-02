@@ -351,15 +351,15 @@ class Statement implements \IteratorAggregate, StatementInterace
      * @param null|string $optArg1
      * @return mixed
      */
-    public function fetch($fetchMode = null, $optArg1 = null)
+    public function fetch($fetchMode = null, $cursorOrientation = \PDO::FETCH_ORI_NEXT, $cursorOffset = 0)
     {
         $fetchMode !== null || $fetchMode = $this->defaultFetchMode;
         switch ($fetchMode) {
             case \PDO::FETCH_OBJ:
             case \PDO::FETCH_CLASS:
-                return $this->internalFetchClassOrObject(isset($optArg1) ? $optArg1 : $this->defaultFetchClass, $this->defaultFetchClassConstructorArgs);
+                return $this->internalFetchClassOrObject($this->defaultFetchClass, $this->defaultFetchClassConstructorArgs);
             case \PDO::FETCH_INTO:
-                return $this->internalFetchClassOrObject(isset($optArg1) ? $optArg1 : $this->defaultFetchInto, []);
+                return $this->internalFetchClassOrObject($this->defaultFetchInto, []);
             case \PDO::FETCH_ASSOC:
                 return $this->internalFetchAssoc();
             case \PDO::FETCH_NUM:
