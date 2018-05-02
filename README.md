@@ -10,9 +10,9 @@ This library is completely separate (i.e. abstracted away) from the core Doctrin
 To utilize this library in your application code, the following is required:
 
 - [Firebird](https://firebirdsql.org/) version 2.5.*
-  - Version 3.* is not supported. You are very welcome to provide a pull request for this.
-- PHP >= 5.6.0
-- [doctrine/dbal: 2.5.\*](https://packagist.org/packages/doctrine/dbal#v2.5.0)
+  - Version 3.* is not tested. You are very welcome to provide a pull request for this.
+- PHP >= 7.1.0
+- [doctrine/dbal: 2.7.\*](https://packagist.org/packages/doctrine/dbal#v2.7.0)
 
 # License & Disclaimer
 
