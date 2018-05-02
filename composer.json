@@ -1,15 +1,15 @@
 {
     "name": "kafoso/doctrine-firebird-driver",
     "type": "library",
+    "license": "MIT",
     "description": "FirebirdSQL driver for the Doctrine DBAL",
     "authors": [
         {
             "name": "Kasper Søfren",
-            "email": "Kasper.Sofren@ist.com"
+            "email": "soefritz@gmail.com"
         },
         {
-            "name": "Uffe Petersen",
-            "email": "Uffe.Petersen@ist.com"
+            "name": "Uffe Petersen"
         }
     ],
     "config": {
@@ -18,14 +18,14 @@
     },
     "autoload": {
         "psr-4": {
-            "IST\\DoctrineFirebirdDriver\\": "src/"
+            "Kafoso\\DoctrineFirebirdDriver\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "IST\\DoctrineFirebirdDriver\\Test\\Resource\\": "tests/resources/Test/Resource",
-            "IST\\DoctrineFirebirdDriver\\Test\\Integration\\": "tests/tests/Test/Integration",
-            "IST\\DoctrineFirebirdDriver\\Test\\Unit\\": "tests/tests/Test/Unit"
+            "Kafoso\\DoctrineFirebirdDriver\\Test\\Resource\\": "tests/resources/Test/Resource",
+            "Kafoso\\DoctrineFirebirdDriver\\Test\\Integration\\": "tests/tests/Test/Integration",
+            "Kafoso\\DoctrineFirebirdDriver\\Test\\Unit\\": "tests/tests/Test/Unit"
         }
     },
     "require": {
