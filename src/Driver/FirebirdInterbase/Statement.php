@@ -303,7 +303,8 @@ class Statement implements \IteratorAggregate, StatementInterace
             // Result seems ok - is either #rows or result handle
             if (is_numeric($this->ibaseResultRc)) {
                 $this->affectedRows = $this->ibaseResultRc;
-                $this->numFields = @ibase_num_fields($this->ibaseResultRc);
+                // Commented because ibase_num_fields() only accepts a resource as parameter!
+                // $this->numFields = @ibase_num_fields($this->ibaseResultRc);
                 $this->ibaseResultRc = null;
             } elseif (is_resource($this->ibaseResultRc)) {
                 $this->affectedRows = @ibase_affected_rows($this->connection->getActiveTransaction());
